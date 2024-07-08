@@ -1,0 +1,21 @@
+{
+  "formatVersion": 1,
+  "organizationName": "Finngram Inc.",
+  "foregroundColor": "rgb(255, 255, 255)",
+  "backgroundColor": "rgb(0, 0, 255)",
+  "labelColor": "rgb(255, 255, 255)",
+  "generic": {
+    "headerFields": [],
+    "primaryFields": [],
+    "secondaryFields": [],
+    "auxiliaryFields": [],
+    "backFields": [
+      {
+        "key": "homepage",
+        "label": "Finngram Inc.",
+        "value": "<a href='https://finngram.com'>Link</a>",
+        "dataDetectorTypes": ["PKDataDetectorTypeLink"]
+      }
+    ]
+  }
+}

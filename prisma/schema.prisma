@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
+}
+
+model Member {
+  id        Int       @id @default(autoincrement())
+  serial    String
+  position  String
+  name      String
+  phone     String
+  email     String
+  telegram  String
+
+  @@index([serial, email])
+}
