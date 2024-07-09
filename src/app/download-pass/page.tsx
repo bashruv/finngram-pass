@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
@@ -86,13 +87,9 @@ export default async function DownloadPathPage() {
           please contact the administrator.
         </p>
       </div>
-      <a
-        className="mx-auto"
-        href="/api/pass"
-        download={`${userInfo.serial}.pkpass`}
-      >
+      <Link className="mx-auto" href="/api/pass">
         <Image src={AppleWalletBtn} height={40} alt="Add to Apple Wallet" />
-      </a>
+      </Link>
     </main>
   );
 }

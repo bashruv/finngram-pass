@@ -1,3 +1,4 @@
+import path from "path";
 import { Readable } from "stream";
 import { Member } from "@prisma/client";
 import { PKPass } from "passkit-generator";
@@ -42,7 +43,7 @@ export async function createPass(userInfo: Member) {
   // 패스 생성
   const pass = await PKPass.from(
     {
-      model: "./src/assets/BizCard.pass",
+      model: path.join(process.cwd(), "src", "assets", "BizCard.pass"),
       certificates,
     },
     {
